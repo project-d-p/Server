@@ -19,4 +19,8 @@ void Server::Accept() {
 	});
 }
 
+Server::~Server() {
+	acceptor_.close();
+}
+
 } // namespace deulee

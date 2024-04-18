@@ -19,6 +19,7 @@ void Session::read()
 		[this, self](boost::system::error_code ec, std::size_t length) {
 			if (!ec) {
 				write();
+				memset(data_, 0, max_length);
 			}
 	});
 }
@@ -32,6 +33,11 @@ void Session::write()
 				read();
 			}
 	});
+}
+
+Session::~Session()
+{
+	socket_.close();
 }
 
 } // namespace deulee
