@@ -1,5 +1,6 @@
 #include <memory>
 #include "server.hpp"
+#include "session.hpp"
 
 namespace deulee {
 
@@ -12,7 +13,7 @@ Server::Server(boost::asio::io_context& io_context, unsigned short port)
 void Server::Accept() {
 	acceptor_.async_accept([this](boost::system::error_code ec, boost::asio::ip::tcp::socket socket) {
 		if (!ec) {
-			// std::make_shared<Session>(std::move(socket))
+			std::make_shared<Session>(std::move(socket))->start();
 		}
 		Accept();
 	});
