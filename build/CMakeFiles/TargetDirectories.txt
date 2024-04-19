@@ -1,3 +1,4 @@
-/home/deulee/project_dp/build/CMakeFiles/game_service.dir
+/home/deulee/project_dp/build/CMakeFiles/game_server.dir
+/home/deulee/project_dp/build/CMakeFiles/clean-objs.dir
 /home/deulee/project_dp/build/CMakeFiles/edit_cache.dir
 /home/deulee/project_dp/build/CMakeFiles/rebuild_cache.dir

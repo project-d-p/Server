@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/deulee/project_dp/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/game_service.dir/all
+all: CMakeFiles/game_server.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,61 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/game_service.dir/clean
+clean: CMakeFiles/game_server.dir/clean
+clean: CMakeFiles/clean-objs.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/game_service.dir
+# Target rules for target CMakeFiles/game_server.dir
 
 # All Build rule for target.
-CMakeFiles/game_service.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_service.dir/build.make CMakeFiles/game_service.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_service.dir/build.make CMakeFiles/game_service.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/deulee/project_dp/build/CMakeFiles --progress-num=1,2,3,4 "Built target game_service"
-.PHONY : CMakeFiles/game_service.dir/all
+CMakeFiles/game_server.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/deulee/project_dp/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target game_server"
+.PHONY : CMakeFiles/game_server.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/game_service.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/deulee/project_dp/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/game_service.dir/all
+CMakeFiles/game_server.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/deulee/project_dp/build/CMakeFiles 10
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/game_server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/deulee/project_dp/build/CMakeFiles 0
-.PHONY : CMakeFiles/game_service.dir/rule
+.PHONY : CMakeFiles/game_server.dir/rule
 
 # Convenience name for target.
-game_service: CMakeFiles/game_service.dir/rule
-.PHONY : game_service
+game_server: CMakeFiles/game_server.dir/rule
+.PHONY : game_server
 
 # clean rule for target.
-CMakeFiles/game_service.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_service.dir/build.make CMakeFiles/game_service.dir/clean
-.PHONY : CMakeFiles/game_service.dir/clean
+CMakeFiles/game_server.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/clean
+.PHONY : CMakeFiles/game_server.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/clean-objs.dir
+
+# All Build rule for target.
+CMakeFiles/clean-objs.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean-objs.dir/build.make CMakeFiles/clean-objs.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean-objs.dir/build.make CMakeFiles/clean-objs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/deulee/project_dp/build/CMakeFiles --progress-num= "Built target clean-objs"
+.PHONY : CMakeFiles/clean-objs.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/clean-objs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/deulee/project_dp/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/clean-objs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/deulee/project_dp/build/CMakeFiles 0
+.PHONY : CMakeFiles/clean-objs.dir/rule
+
+# Convenience name for target.
+clean-objs: CMakeFiles/clean-objs.dir/rule
+.PHONY : clean-objs
+
+# clean rule for target.
+CMakeFiles/clean-objs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean-objs.dir/build.make CMakeFiles/clean-objs.dir/clean
+.PHONY : CMakeFiles/clean-objs.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
