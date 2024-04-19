@@ -11,7 +11,7 @@ private:
 	char data_[max_length];
 	
 	void read();
-	void write();
+	void write(std::size_t length);
 
 public:
 	Session() = delete;
