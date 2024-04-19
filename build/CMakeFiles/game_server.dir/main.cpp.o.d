@@ -1,6 +1,5 @@
-CMakeFiles/game_service.dir/srcs/session.cpp.o: \
- /home/deulee/project_dp/srcs/session.cpp /usr/include/stdc-predef.h \
- /home/deulee/project_dp/srcs/session.hpp /usr/include/boost/asio.hpp \
+CMakeFiles/game_server.dir/main.cpp.o: /home/deulee/project_dp/main.cpp \
+ /usr/include/stdc-predef.h /usr/include/boost/asio.hpp \
  /usr/include/boost/asio/associated_allocator.hpp \
  /usr/include/boost/asio/detail/config.hpp /usr/include/boost/config.hpp \
  /usr/include/boost/config/user.hpp \
@@ -1109,4 +1108,5 @@ CMakeFiles/game_service.dir/srcs/session.cpp.o: \
  /usr/include/boost/asio/windows/random_access_handle.hpp \
  /usr/include/boost/asio/windows/stream_handle.hpp \
  /usr/include/boost/asio/write_at.hpp \
- /usr/include/boost/asio/impl/write_at.hpp
+ /usr/include/boost/asio/impl/write_at.hpp \
+ /home/deulee/project_dp/./srcs/server.hpp

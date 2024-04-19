@@ -117,24 +117,37 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named game_service
+# Target rules for targets named game_server
 
 # Build rule for target.
-game_service: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game_service
-.PHONY : game_service
+game_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game_server
+.PHONY : game_server
 
 # fast build rule for target.
-game_service/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_service.dir/build.make CMakeFiles/game_service.dir/build
-.PHONY : game_service/fast
+game_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/build
+.PHONY : game_server/fast
+
+#=============================================================================
+# Target rules for targets named clean-objs
+
+# Build rule for target.
+clean-objs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean-objs
+.PHONY : clean-objs
+
+# fast build rule for target.
+clean-objs/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean-objs.dir/build.make CMakeFiles/clean-objs.dir/build
+.PHONY : clean-objs/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_service.dir/build.make CMakeFiles/game_service.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -142,7 +155,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_service.dir/build.make CMakeFiles/game_service.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -150,15 +163,159 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_service.dir/build.make CMakeFiles/game_service.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+proto_build/message.pb.o: proto_build/message.pb.cc.o
+.PHONY : proto_build/message.pb.o
+
+# target to build an object file
+proto_build/message.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/proto_build/message.pb.cc.o
+.PHONY : proto_build/message.pb.cc.o
+
+proto_build/message.pb.i: proto_build/message.pb.cc.i
+.PHONY : proto_build/message.pb.i
+
+# target to preprocess a source file
+proto_build/message.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/proto_build/message.pb.cc.i
+.PHONY : proto_build/message.pb.cc.i
+
+proto_build/message.pb.s: proto_build/message.pb.cc.s
+.PHONY : proto_build/message.pb.s
+
+# target to generate assembly for a file
+proto_build/message.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/proto_build/message.pb.cc.s
+.PHONY : proto_build/message.pb.cc.s
+
+proto_build/movement.pb.o: proto_build/movement.pb.cc.o
+.PHONY : proto_build/movement.pb.o
+
+# target to build an object file
+proto_build/movement.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/proto_build/movement.pb.cc.o
+.PHONY : proto_build/movement.pb.cc.o
+
+proto_build/movement.pb.i: proto_build/movement.pb.cc.i
+.PHONY : proto_build/movement.pb.i
+
+# target to preprocess a source file
+proto_build/movement.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/proto_build/movement.pb.cc.i
+.PHONY : proto_build/movement.pb.cc.i
+
+proto_build/movement.pb.s: proto_build/movement.pb.cc.s
+.PHONY : proto_build/movement.pb.s
+
+# target to generate assembly for a file
+proto_build/movement.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/proto_build/movement.pb.cc.s
+.PHONY : proto_build/movement.pb.cc.s
+
+proto_build/player_position.pb.o: proto_build/player_position.pb.cc.o
+.PHONY : proto_build/player_position.pb.o
+
+# target to build an object file
+proto_build/player_position.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/proto_build/player_position.pb.cc.o
+.PHONY : proto_build/player_position.pb.cc.o
+
+proto_build/player_position.pb.i: proto_build/player_position.pb.cc.i
+.PHONY : proto_build/player_position.pb.i
+
+# target to preprocess a source file
+proto_build/player_position.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/proto_build/player_position.pb.cc.i
+.PHONY : proto_build/player_position.pb.cc.i
+
+proto_build/player_position.pb.s: proto_build/player_position.pb.cc.s
+.PHONY : proto_build/player_position.pb.s
+
+# target to generate assembly for a file
+proto_build/player_position.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/proto_build/player_position.pb.cc.s
+.PHONY : proto_build/player_position.pb.cc.s
+
+proto_build/state.pb.o: proto_build/state.pb.cc.o
+.PHONY : proto_build/state.pb.o
+
+# target to build an object file
+proto_build/state.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/proto_build/state.pb.cc.o
+.PHONY : proto_build/state.pb.cc.o
+
+proto_build/state.pb.i: proto_build/state.pb.cc.i
+.PHONY : proto_build/state.pb.i
+
+# target to preprocess a source file
+proto_build/state.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/proto_build/state.pb.cc.i
+.PHONY : proto_build/state.pb.cc.i
+
+proto_build/state.pb.s: proto_build/state.pb.cc.s
+.PHONY : proto_build/state.pb.s
+
+# target to generate assembly for a file
+proto_build/state.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/proto_build/state.pb.cc.s
+.PHONY : proto_build/state.pb.cc.s
+
+proto_build/vector.pb.o: proto_build/vector.pb.cc.o
+.PHONY : proto_build/vector.pb.o
+
+# target to build an object file
+proto_build/vector.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/proto_build/vector.pb.cc.o
+.PHONY : proto_build/vector.pb.cc.o
+
+proto_build/vector.pb.i: proto_build/vector.pb.cc.i
+.PHONY : proto_build/vector.pb.i
+
+# target to preprocess a source file
+proto_build/vector.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/proto_build/vector.pb.cc.i
+.PHONY : proto_build/vector.pb.cc.i
+
+proto_build/vector.pb.s: proto_build/vector.pb.cc.s
+.PHONY : proto_build/vector.pb.s
+
+# target to generate assembly for a file
+proto_build/vector.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/proto_build/vector.pb.cc.s
+.PHONY : proto_build/vector.pb.cc.s
+
+srcs/protobuf_mannager.o: srcs/protobuf_mannager.cpp.o
+.PHONY : srcs/protobuf_mannager.o
+
+# target to build an object file
+srcs/protobuf_mannager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/srcs/protobuf_mannager.cpp.o
+.PHONY : srcs/protobuf_mannager.cpp.o
+
+srcs/protobuf_mannager.i: srcs/protobuf_mannager.cpp.i
+.PHONY : srcs/protobuf_mannager.i
+
+# target to preprocess a source file
+srcs/protobuf_mannager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/srcs/protobuf_mannager.cpp.i
+.PHONY : srcs/protobuf_mannager.cpp.i
+
+srcs/protobuf_mannager.s: srcs/protobuf_mannager.cpp.s
+.PHONY : srcs/protobuf_mannager.s
+
+# target to generate assembly for a file
+srcs/protobuf_mannager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/srcs/protobuf_mannager.cpp.s
+.PHONY : srcs/protobuf_mannager.cpp.s
 
 srcs/server.o: srcs/server.cpp.o
 .PHONY : srcs/server.o
 
 # target to build an object file
 srcs/server.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_service.dir/build.make CMakeFiles/game_service.dir/srcs/server.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/srcs/server.cpp.o
 .PHONY : srcs/server.cpp.o
 
 srcs/server.i: srcs/server.cpp.i
@@ -166,7 +323,7 @@ srcs/server.i: srcs/server.cpp.i
 
 # target to preprocess a source file
 srcs/server.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_service.dir/build.make CMakeFiles/game_service.dir/srcs/server.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/srcs/server.cpp.i
 .PHONY : srcs/server.cpp.i
 
 srcs/server.s: srcs/server.cpp.s
@@ -174,7 +331,7 @@ srcs/server.s: srcs/server.cpp.s
 
 # target to generate assembly for a file
 srcs/server.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_service.dir/build.make CMakeFiles/game_service.dir/srcs/server.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/srcs/server.cpp.s
 .PHONY : srcs/server.cpp.s
 
 srcs/session.o: srcs/session.cpp.o
@@ -182,7 +339,7 @@ srcs/session.o: srcs/session.cpp.o
 
 # target to build an object file
 srcs/session.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_service.dir/build.make CMakeFiles/game_service.dir/srcs/session.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/srcs/session.cpp.o
 .PHONY : srcs/session.cpp.o
 
 srcs/session.i: srcs/session.cpp.i
@@ -190,7 +347,7 @@ srcs/session.i: srcs/session.cpp.i
 
 # target to preprocess a source file
 srcs/session.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_service.dir/build.make CMakeFiles/game_service.dir/srcs/session.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/srcs/session.cpp.i
 .PHONY : srcs/session.cpp.i
 
 srcs/session.s: srcs/session.cpp.s
@@ -198,7 +355,7 @@ srcs/session.s: srcs/session.cpp.s
 
 # target to generate assembly for a file
 srcs/session.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_service.dir/build.make CMakeFiles/game_service.dir/srcs/session.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/srcs/session.cpp.s
 .PHONY : srcs/session.cpp.s
 
 # Help Target
@@ -209,10 +366,29 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... game_service"
+	@echo "... clean-objs"
+	@echo "... game_server"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... proto_build/message.pb.o"
+	@echo "... proto_build/message.pb.i"
+	@echo "... proto_build/message.pb.s"
+	@echo "... proto_build/movement.pb.o"
+	@echo "... proto_build/movement.pb.i"
+	@echo "... proto_build/movement.pb.s"
+	@echo "... proto_build/player_position.pb.o"
+	@echo "... proto_build/player_position.pb.i"
+	@echo "... proto_build/player_position.pb.s"
+	@echo "... proto_build/state.pb.o"
+	@echo "... proto_build/state.pb.i"
+	@echo "... proto_build/state.pb.s"
+	@echo "... proto_build/vector.pb.o"
+	@echo "... proto_build/vector.pb.i"
+	@echo "... proto_build/vector.pb.s"
+	@echo "... srcs/protobuf_mannager.o"
+	@echo "... srcs/protobuf_mannager.i"
+	@echo "... srcs/protobuf_mannager.s"
 	@echo "... srcs/server.o"
 	@echo "... srcs/server.i"
 	@echo "... srcs/server.s"
