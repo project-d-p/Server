@@ -1,12 +1,16 @@
 #pragma once
 
 #include <boost/asio.hpp>
+#include <memory>
+#include <vector>
+#include "channel.hpp"
 
 namespace deulee {
 
 class Server {
 private:
 	boost::asio::ip::tcp::acceptor acceptor_;
+	std::vector<std::shared_ptr<Channel>> channels_;
 
 private:
 	void Accept();
