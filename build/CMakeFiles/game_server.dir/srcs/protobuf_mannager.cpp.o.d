@@ -288,4 +288,5 @@ CMakeFiles/game_server.dir/srcs/protobuf_mannager.cpp.o: \
  /home/deulee/project_dp/srcs/../proto_build/movement.pb.h \
  /home/deulee/project_dp/srcs/../proto_build/state.pb.h \
  /home/deulee/project_dp/srcs/../proto_build/vector.pb.h \
- /home/deulee/project_dp/srcs/../proto_build/player_position.pb.h
+ /home/deulee/project_dp/srcs/../proto_build/player_position.pb.h \
+ /usr/include/c++/11/bitset

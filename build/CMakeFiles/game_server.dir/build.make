@@ -125,10 +125,66 @@ CMakeFiles/game_server.dir/srcs/protobuf_mannager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game_server.dir/srcs/protobuf_mannager.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/deulee/project_dp/srcs/protobuf_mannager.cpp -o CMakeFiles/game_server.dir/srcs/protobuf_mannager.cpp.s
 
+CMakeFiles/game_server.dir/srcs/prototype.cpp.o: CMakeFiles/game_server.dir/flags.make
+CMakeFiles/game_server.dir/srcs/prototype.cpp.o: ../srcs/prototype.cpp
+CMakeFiles/game_server.dir/srcs/prototype.cpp.o: CMakeFiles/game_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deulee/project_dp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/game_server.dir/srcs/prototype.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_server.dir/srcs/prototype.cpp.o -MF CMakeFiles/game_server.dir/srcs/prototype.cpp.o.d -o CMakeFiles/game_server.dir/srcs/prototype.cpp.o -c /home/deulee/project_dp/srcs/prototype.cpp
+
+CMakeFiles/game_server.dir/srcs/prototype.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game_server.dir/srcs/prototype.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/deulee/project_dp/srcs/prototype.cpp > CMakeFiles/game_server.dir/srcs/prototype.cpp.i
+
+CMakeFiles/game_server.dir/srcs/prototype.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game_server.dir/srcs/prototype.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/deulee/project_dp/srcs/prototype.cpp -o CMakeFiles/game_server.dir/srcs/prototype.cpp.s
+
+CMakeFiles/game_server.dir/srcs/prototype_factory.cpp.o: CMakeFiles/game_server.dir/flags.make
+CMakeFiles/game_server.dir/srcs/prototype_factory.cpp.o: ../srcs/prototype_factory.cpp
+CMakeFiles/game_server.dir/srcs/prototype_factory.cpp.o: CMakeFiles/game_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deulee/project_dp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/game_server.dir/srcs/prototype_factory.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_server.dir/srcs/prototype_factory.cpp.o -MF CMakeFiles/game_server.dir/srcs/prototype_factory.cpp.o.d -o CMakeFiles/game_server.dir/srcs/prototype_factory.cpp.o -c /home/deulee/project_dp/srcs/prototype_factory.cpp
+
+CMakeFiles/game_server.dir/srcs/prototype_factory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game_server.dir/srcs/prototype_factory.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/deulee/project_dp/srcs/prototype_factory.cpp > CMakeFiles/game_server.dir/srcs/prototype_factory.cpp.i
+
+CMakeFiles/game_server.dir/srcs/prototype_factory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game_server.dir/srcs/prototype_factory.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/deulee/project_dp/srcs/prototype_factory.cpp -o CMakeFiles/game_server.dir/srcs/prototype_factory.cpp.s
+
+CMakeFiles/game_server.dir/srcs/movement_prototype.cpp.o: CMakeFiles/game_server.dir/flags.make
+CMakeFiles/game_server.dir/srcs/movement_prototype.cpp.o: ../srcs/movement_prototype.cpp
+CMakeFiles/game_server.dir/srcs/movement_prototype.cpp.o: CMakeFiles/game_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deulee/project_dp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/game_server.dir/srcs/movement_prototype.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_server.dir/srcs/movement_prototype.cpp.o -MF CMakeFiles/game_server.dir/srcs/movement_prototype.cpp.o.d -o CMakeFiles/game_server.dir/srcs/movement_prototype.cpp.o -c /home/deulee/project_dp/srcs/movement_prototype.cpp
+
+CMakeFiles/game_server.dir/srcs/movement_prototype.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game_server.dir/srcs/movement_prototype.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/deulee/project_dp/srcs/movement_prototype.cpp > CMakeFiles/game_server.dir/srcs/movement_prototype.cpp.i
+
+CMakeFiles/game_server.dir/srcs/movement_prototype.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game_server.dir/srcs/movement_prototype.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/deulee/project_dp/srcs/movement_prototype.cpp -o CMakeFiles/game_server.dir/srcs/movement_prototype.cpp.s
+
+CMakeFiles/game_server.dir/srcs/channel.cpp.o: CMakeFiles/game_server.dir/flags.make
+CMakeFiles/game_server.dir/srcs/channel.cpp.o: ../srcs/channel.cpp
+CMakeFiles/game_server.dir/srcs/channel.cpp.o: CMakeFiles/game_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deulee/project_dp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/game_server.dir/srcs/channel.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_server.dir/srcs/channel.cpp.o -MF CMakeFiles/game_server.dir/srcs/channel.cpp.o.d -o CMakeFiles/game_server.dir/srcs/channel.cpp.o -c /home/deulee/project_dp/srcs/channel.cpp
+
+CMakeFiles/game_server.dir/srcs/channel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game_server.dir/srcs/channel.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/deulee/project_dp/srcs/channel.cpp > CMakeFiles/game_server.dir/srcs/channel.cpp.i
+
+CMakeFiles/game_server.dir/srcs/channel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game_server.dir/srcs/channel.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/deulee/project_dp/srcs/channel.cpp -o CMakeFiles/game_server.dir/srcs/channel.cpp.s
+
 CMakeFiles/game_server.dir/proto_build/message.pb.cc.o: CMakeFiles/game_server.dir/flags.make
 CMakeFiles/game_server.dir/proto_build/message.pb.cc.o: ../proto_build/message.pb.cc
 CMakeFiles/game_server.dir/proto_build/message.pb.cc.o: CMakeFiles/game_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deulee/project_dp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/game_server.dir/proto_build/message.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deulee/project_dp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/game_server.dir/proto_build/message.pb.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_server.dir/proto_build/message.pb.cc.o -MF CMakeFiles/game_server.dir/proto_build/message.pb.cc.o.d -o CMakeFiles/game_server.dir/proto_build/message.pb.cc.o -c /home/deulee/project_dp/proto_build/message.pb.cc
 
 CMakeFiles/game_server.dir/proto_build/message.pb.cc.i: cmake_force
@@ -142,7 +198,7 @@ CMakeFiles/game_server.dir/proto_build/message.pb.cc.s: cmake_force
 CMakeFiles/game_server.dir/proto_build/movement.pb.cc.o: CMakeFiles/game_server.dir/flags.make
 CMakeFiles/game_server.dir/proto_build/movement.pb.cc.o: ../proto_build/movement.pb.cc
 CMakeFiles/game_server.dir/proto_build/movement.pb.cc.o: CMakeFiles/game_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deulee/project_dp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/game_server.dir/proto_build/movement.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deulee/project_dp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/game_server.dir/proto_build/movement.pb.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_server.dir/proto_build/movement.pb.cc.o -MF CMakeFiles/game_server.dir/proto_build/movement.pb.cc.o.d -o CMakeFiles/game_server.dir/proto_build/movement.pb.cc.o -c /home/deulee/project_dp/proto_build/movement.pb.cc
 
 CMakeFiles/game_server.dir/proto_build/movement.pb.cc.i: cmake_force
@@ -156,7 +212,7 @@ CMakeFiles/game_server.dir/proto_build/movement.pb.cc.s: cmake_force
 CMakeFiles/game_server.dir/proto_build/player_position.pb.cc.o: CMakeFiles/game_server.dir/flags.make
 CMakeFiles/game_server.dir/proto_build/player_position.pb.cc.o: ../proto_build/player_position.pb.cc
 CMakeFiles/game_server.dir/proto_build/player_position.pb.cc.o: CMakeFiles/game_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deulee/project_dp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/game_server.dir/proto_build/player_position.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deulee/project_dp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/game_server.dir/proto_build/player_position.pb.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_server.dir/proto_build/player_position.pb.cc.o -MF CMakeFiles/game_server.dir/proto_build/player_position.pb.cc.o.d -o CMakeFiles/game_server.dir/proto_build/player_position.pb.cc.o -c /home/deulee/project_dp/proto_build/player_position.pb.cc
 
 CMakeFiles/game_server.dir/proto_build/player_position.pb.cc.i: cmake_force
@@ -170,7 +226,7 @@ CMakeFiles/game_server.dir/proto_build/player_position.pb.cc.s: cmake_force
 CMakeFiles/game_server.dir/proto_build/state.pb.cc.o: CMakeFiles/game_server.dir/flags.make
 CMakeFiles/game_server.dir/proto_build/state.pb.cc.o: ../proto_build/state.pb.cc
 CMakeFiles/game_server.dir/proto_build/state.pb.cc.o: CMakeFiles/game_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deulee/project_dp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/game_server.dir/proto_build/state.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deulee/project_dp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/game_server.dir/proto_build/state.pb.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_server.dir/proto_build/state.pb.cc.o -MF CMakeFiles/game_server.dir/proto_build/state.pb.cc.o.d -o CMakeFiles/game_server.dir/proto_build/state.pb.cc.o -c /home/deulee/project_dp/proto_build/state.pb.cc
 
 CMakeFiles/game_server.dir/proto_build/state.pb.cc.i: cmake_force
@@ -184,7 +240,7 @@ CMakeFiles/game_server.dir/proto_build/state.pb.cc.s: cmake_force
 CMakeFiles/game_server.dir/proto_build/vector.pb.cc.o: CMakeFiles/game_server.dir/flags.make
 CMakeFiles/game_server.dir/proto_build/vector.pb.cc.o: ../proto_build/vector.pb.cc
 CMakeFiles/game_server.dir/proto_build/vector.pb.cc.o: CMakeFiles/game_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deulee/project_dp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/game_server.dir/proto_build/vector.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deulee/project_dp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/game_server.dir/proto_build/vector.pb.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_server.dir/proto_build/vector.pb.cc.o -MF CMakeFiles/game_server.dir/proto_build/vector.pb.cc.o.d -o CMakeFiles/game_server.dir/proto_build/vector.pb.cc.o -c /home/deulee/project_dp/proto_build/vector.pb.cc
 
 CMakeFiles/game_server.dir/proto_build/vector.pb.cc.i: cmake_force
@@ -201,6 +257,10 @@ game_server_OBJECTS = \
 "CMakeFiles/game_server.dir/srcs/server.cpp.o" \
 "CMakeFiles/game_server.dir/srcs/session.cpp.o" \
 "CMakeFiles/game_server.dir/srcs/protobuf_mannager.cpp.o" \
+"CMakeFiles/game_server.dir/srcs/prototype.cpp.o" \
+"CMakeFiles/game_server.dir/srcs/prototype_factory.cpp.o" \
+"CMakeFiles/game_server.dir/srcs/movement_prototype.cpp.o" \
+"CMakeFiles/game_server.dir/srcs/channel.cpp.o" \
 "CMakeFiles/game_server.dir/proto_build/message.pb.cc.o" \
 "CMakeFiles/game_server.dir/proto_build/movement.pb.cc.o" \
 "CMakeFiles/game_server.dir/proto_build/player_position.pb.cc.o" \
@@ -214,6 +274,10 @@ game_server: CMakeFiles/game_server.dir/main.cpp.o
 game_server: CMakeFiles/game_server.dir/srcs/server.cpp.o
 game_server: CMakeFiles/game_server.dir/srcs/session.cpp.o
 game_server: CMakeFiles/game_server.dir/srcs/protobuf_mannager.cpp.o
+game_server: CMakeFiles/game_server.dir/srcs/prototype.cpp.o
+game_server: CMakeFiles/game_server.dir/srcs/prototype_factory.cpp.o
+game_server: CMakeFiles/game_server.dir/srcs/movement_prototype.cpp.o
+game_server: CMakeFiles/game_server.dir/srcs/channel.cpp.o
 game_server: CMakeFiles/game_server.dir/proto_build/message.pb.cc.o
 game_server: CMakeFiles/game_server.dir/proto_build/movement.pb.cc.o
 game_server: CMakeFiles/game_server.dir/proto_build/player_position.pb.cc.o
@@ -223,7 +287,7 @@ game_server: CMakeFiles/game_server.dir/build.make
 game_server: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.74.0
 game_server: /usr/lib/x86_64-linux-gnu/libprotobuf.so
 game_server: CMakeFiles/game_server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/deulee/project_dp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable game_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/deulee/project_dp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable game_server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/game_server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

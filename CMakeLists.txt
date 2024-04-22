@@ -5,8 +5,12 @@ project(game_server) # name of the project
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+# add the debug flag to the compiler
+add_compile_options(-g)
+
 # set the source files to compile
 add_executable(game_server main.cpp srcs/server.cpp srcs/session.cpp srcs/protobuf_mannager.cpp
+    srcs/prototype.cpp srcs/prototype_factory.cpp srcs/movement_prototype.cpp srcs/channel.cpp
 	proto_build/message.pb.cc proto_build/movement.pb.cc proto_build/player_position.pb.cc
 	proto_build/state.pb.cc proto_build/vector.pb.cc)
 
