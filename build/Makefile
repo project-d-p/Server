@@ -286,6 +286,54 @@ proto_build/vector.pb.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/proto_build/vector.pb.cc.s
 .PHONY : proto_build/vector.pb.cc.s
 
+srcs/channel.o: srcs/channel.cpp.o
+.PHONY : srcs/channel.o
+
+# target to build an object file
+srcs/channel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/srcs/channel.cpp.o
+.PHONY : srcs/channel.cpp.o
+
+srcs/channel.i: srcs/channel.cpp.i
+.PHONY : srcs/channel.i
+
+# target to preprocess a source file
+srcs/channel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/srcs/channel.cpp.i
+.PHONY : srcs/channel.cpp.i
+
+srcs/channel.s: srcs/channel.cpp.s
+.PHONY : srcs/channel.s
+
+# target to generate assembly for a file
+srcs/channel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/srcs/channel.cpp.s
+.PHONY : srcs/channel.cpp.s
+
+srcs/movement_prototype.o: srcs/movement_prototype.cpp.o
+.PHONY : srcs/movement_prototype.o
+
+# target to build an object file
+srcs/movement_prototype.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/srcs/movement_prototype.cpp.o
+.PHONY : srcs/movement_prototype.cpp.o
+
+srcs/movement_prototype.i: srcs/movement_prototype.cpp.i
+.PHONY : srcs/movement_prototype.i
+
+# target to preprocess a source file
+srcs/movement_prototype.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/srcs/movement_prototype.cpp.i
+.PHONY : srcs/movement_prototype.cpp.i
+
+srcs/movement_prototype.s: srcs/movement_prototype.cpp.s
+.PHONY : srcs/movement_prototype.s
+
+# target to generate assembly for a file
+srcs/movement_prototype.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/srcs/movement_prototype.cpp.s
+.PHONY : srcs/movement_prototype.cpp.s
+
 srcs/protobuf_mannager.o: srcs/protobuf_mannager.cpp.o
 .PHONY : srcs/protobuf_mannager.o
 
@@ -309,6 +357,54 @@ srcs/protobuf_mannager.s: srcs/protobuf_mannager.cpp.s
 srcs/protobuf_mannager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/srcs/protobuf_mannager.cpp.s
 .PHONY : srcs/protobuf_mannager.cpp.s
+
+srcs/prototype.o: srcs/prototype.cpp.o
+.PHONY : srcs/prototype.o
+
+# target to build an object file
+srcs/prototype.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/srcs/prototype.cpp.o
+.PHONY : srcs/prototype.cpp.o
+
+srcs/prototype.i: srcs/prototype.cpp.i
+.PHONY : srcs/prototype.i
+
+# target to preprocess a source file
+srcs/prototype.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/srcs/prototype.cpp.i
+.PHONY : srcs/prototype.cpp.i
+
+srcs/prototype.s: srcs/prototype.cpp.s
+.PHONY : srcs/prototype.s
+
+# target to generate assembly for a file
+srcs/prototype.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/srcs/prototype.cpp.s
+.PHONY : srcs/prototype.cpp.s
+
+srcs/prototype_factory.o: srcs/prototype_factory.cpp.o
+.PHONY : srcs/prototype_factory.o
+
+# target to build an object file
+srcs/prototype_factory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/srcs/prototype_factory.cpp.o
+.PHONY : srcs/prototype_factory.cpp.o
+
+srcs/prototype_factory.i: srcs/prototype_factory.cpp.i
+.PHONY : srcs/prototype_factory.i
+
+# target to preprocess a source file
+srcs/prototype_factory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/srcs/prototype_factory.cpp.i
+.PHONY : srcs/prototype_factory.cpp.i
+
+srcs/prototype_factory.s: srcs/prototype_factory.cpp.s
+.PHONY : srcs/prototype_factory.s
+
+# target to generate assembly for a file
+srcs/prototype_factory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_server.dir/build.make CMakeFiles/game_server.dir/srcs/prototype_factory.cpp.s
+.PHONY : srcs/prototype_factory.cpp.s
 
 srcs/server.o: srcs/server.cpp.o
 .PHONY : srcs/server.o
@@ -386,9 +482,21 @@ help:
 	@echo "... proto_build/vector.pb.o"
 	@echo "... proto_build/vector.pb.i"
 	@echo "... proto_build/vector.pb.s"
+	@echo "... srcs/channel.o"
+	@echo "... srcs/channel.i"
+	@echo "... srcs/channel.s"
+	@echo "... srcs/movement_prototype.o"
+	@echo "... srcs/movement_prototype.i"
+	@echo "... srcs/movement_prototype.s"
 	@echo "... srcs/protobuf_mannager.o"
 	@echo "... srcs/protobuf_mannager.i"
 	@echo "... srcs/protobuf_mannager.s"
+	@echo "... srcs/prototype.o"
+	@echo "... srcs/prototype.i"
+	@echo "... srcs/prototype.s"
+	@echo "... srcs/prototype_factory.o"
+	@echo "... srcs/prototype_factory.i"
+	@echo "... srcs/prototype_factory.s"
 	@echo "... srcs/server.o"
 	@echo "... srcs/server.i"
 	@echo "... srcs/server.s"

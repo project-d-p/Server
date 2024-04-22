@@ -1,4 +1,6 @@
 #include "protobuf_mannager.hpp"
+#include <bitset>
+#include <iostream>
 
 namespace deulee {
 	ProtobufMannager::ProtobufMannager() {}

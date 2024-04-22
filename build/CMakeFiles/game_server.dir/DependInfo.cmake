@@ -14,7 +14,11 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/deulee/project_dp/proto_build/player_position.pb.cc" "CMakeFiles/game_server.dir/proto_build/player_position.pb.cc.o" "gcc" "CMakeFiles/game_server.dir/proto_build/player_position.pb.cc.o.d"
   "/home/deulee/project_dp/proto_build/state.pb.cc" "CMakeFiles/game_server.dir/proto_build/state.pb.cc.o" "gcc" "CMakeFiles/game_server.dir/proto_build/state.pb.cc.o.d"
   "/home/deulee/project_dp/proto_build/vector.pb.cc" "CMakeFiles/game_server.dir/proto_build/vector.pb.cc.o" "gcc" "CMakeFiles/game_server.dir/proto_build/vector.pb.cc.o.d"
+  "/home/deulee/project_dp/srcs/channel.cpp" "CMakeFiles/game_server.dir/srcs/channel.cpp.o" "gcc" "CMakeFiles/game_server.dir/srcs/channel.cpp.o.d"
+  "/home/deulee/project_dp/srcs/movement_prototype.cpp" "CMakeFiles/game_server.dir/srcs/movement_prototype.cpp.o" "gcc" "CMakeFiles/game_server.dir/srcs/movement_prototype.cpp.o.d"
   "/home/deulee/project_dp/srcs/protobuf_mannager.cpp" "CMakeFiles/game_server.dir/srcs/protobuf_mannager.cpp.o" "gcc" "CMakeFiles/game_server.dir/srcs/protobuf_mannager.cpp.o.d"
+  "/home/deulee/project_dp/srcs/prototype.cpp" "CMakeFiles/game_server.dir/srcs/prototype.cpp.o" "gcc" "CMakeFiles/game_server.dir/srcs/prototype.cpp.o.d"
+  "/home/deulee/project_dp/srcs/prototype_factory.cpp" "CMakeFiles/game_server.dir/srcs/prototype_factory.cpp.o" "gcc" "CMakeFiles/game_server.dir/srcs/prototype_factory.cpp.o.d"
   "/home/deulee/project_dp/srcs/server.cpp" "CMakeFiles/game_server.dir/srcs/server.cpp.o" "gcc" "CMakeFiles/game_server.dir/srcs/server.cpp.o.d"
   "/home/deulee/project_dp/srcs/session.cpp" "CMakeFiles/game_server.dir/srcs/session.cpp.o" "gcc" "CMakeFiles/game_server.dir/srcs/session.cpp.o.d"
   )

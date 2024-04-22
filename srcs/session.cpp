@@ -9,32 +9,26 @@ Session::Session(boost::asio::ip::tcp::socket socket)
 {
 }
 
-void Session::start() 
+void Session::read(std::queue<Message>& tcp_message_queue)
 {
-	read();
-}
-
-void Session::read()
-{
-	auto self(shared_from_this());
 	socket_.async_read_some(boost::asio::buffer(data_, max_length),
-		[this, self](boost::system::error_code ec, std::size_t length) {
+		[this, &tcp_message_queue](boost::system::error_code ec, std::size_t length) {
 			if (!ec) {
 				Message message(ProtobufMannager::Deserialize(data_));
-				ProtobufMannager::Serialize(data_, message);
-				write(length);
+				tcp_message_queue.push(message);
 				memset(data_, 0, max_length);
+				this->read(tcp_message_queue);
 			}
 	});
 }
 
-void Session::write(std::size_t length)
+void Session::write(const Message& message)
 {
-	auto self(shared_from_this());
+	ProtobufMannager::Serialize(data_, message);
+	size_t length = message.ByteSizeLong() + sizeof(uint32_t);
 	boost::asio::async_write(socket_, boost::asio::buffer(data_, length),
-		[this, self](boost::system::error_code ec, std::size_t length) {
+		[this](boost::system::error_code ec, std::size_t length) {
 			if (!ec) {
-				read();
 			}
 	});
 }
