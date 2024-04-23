@@ -85,7 +85,10 @@ int main(int argc, char* argv[]) {
 
             // 수신한 데이터 출력
             Message received_message;
-            received_message.ParseFromArray(buffer + 4, 1020);
+            uint32_t message_size;
+            memcpy(&message_size, buffer, sizeof(message_size));
+            std::cout << "message_size: " << message_size << std::endl;
+            received_message.ParseFromArray(buffer + 4, message_size);
             std::cout << "Received message: " << received_message.DebugString() << std::endl;
 
             // 연결 종료
@@ -129,7 +132,10 @@ int main(int argc, char* argv[]) {
             udp::endpoint result_type;
             size_t length = socket.receive_from(asio::buffer(buffer), result_type);
             Message received_message;
-            received_message.ParseFromArray(buffer + 4, length - 4);
+            uint32_t message_size;
+            memcpy(&message_size, buffer, sizeof(message_size));
+            std::cout << "message_size: " << message_size << std::endl;
+            received_message.ParseFromArray(buffer + 4, message_size);
             std::cout << "Received message: " << received_message.DebugString() << std::endl;
         }
     } catch (std::exception& e) {

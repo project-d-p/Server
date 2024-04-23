@@ -236,10 +236,10 @@ Protobuf_LITE_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotobuf-lit
 Protobuf_PROTOC_EXECUTABLE:FILEPATH=/usr/bin/protoc
 
 //Path to a library.
-Protobuf_PROTOC_LIBRARY_DEBUG:FILEPATH=Protobuf_PROTOC_LIBRARY_DEBUG-NOTFOUND
+Protobuf_PROTOC_LIBRARY_DEBUG:FILEPATH=/usr/lib/libprotoc.a
 
 //Path to a library.
-Protobuf_PROTOC_LIBRARY_RELEASE:FILEPATH=Protobuf_PROTOC_LIBRARY_RELEASE-NOTFOUND
+Protobuf_PROTOC_LIBRARY_RELEASE:FILEPATH=/usr/lib/libprotoc.a
 
 //The directory containing a CMake configuration file for boost_headers.
 boost_headers_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.74.0
