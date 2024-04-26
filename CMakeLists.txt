@@ -3,7 +3,7 @@ project(game_server)
 
 find_package(Threads REQUIRED)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 add_compile_options(-g)
@@ -40,6 +40,7 @@ set(PROTO_FILES
     "${CMAKE_CURRENT_SOURCE_DIR}/proto/message.proto"
     "${CMAKE_CURRENT_SOURCE_DIR}/proto/movement.proto"
     "${CMAKE_CURRENT_SOURCE_DIR}/proto/player_position.proto"
+    "${CMAKE_CURRENT_SOURCE_DIR}/proto/attach.proto"
     "${CMAKE_CURRENT_SOURCE_DIR}/proto/state.proto"
     "${CMAKE_CURRENT_SOURCE_DIR}/proto/vector.proto"
     "${CMAKE_CURRENT_SOURCE_DIR}/proto/grpc_match.proto"

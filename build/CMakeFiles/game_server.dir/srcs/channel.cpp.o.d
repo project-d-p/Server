@@ -181,7 +181,12 @@ CMakeFiles/game_server.dir/srcs/channel.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h /usr/include/c++/11/cstring \
- /usr/include/string.h /usr/include/strings.h /usr/include/boost/asio.hpp \
+ /usr/include/string.h /usr/include/strings.h /usr/include/c++/11/map \
+ /usr/include/c++/11/bits/stl_tree.h \
+ /usr/include/c++/11/bits/node_handle.h \
+ /usr/include/c++/11/bits/stl_map.h \
+ /usr/include/c++/11/bits/stl_multimap.h \
+ /usr/include/c++/11/bits/erase_if.h /usr/include/boost/asio.hpp \
  /usr/include/boost/asio/associated_allocator.hpp \
  /usr/include/boost/asio/detail/config.hpp /usr/include/boost/config.hpp \
  /usr/include/boost/config/user.hpp \
@@ -303,21 +308,17 @@ CMakeFiles/game_server.dir/srcs/channel.cpp.o: \
  /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
  /usr/include/c++/11/bits/hashtable_policy.h \
  /usr/include/c++/11/bits/enable_special_members.h \
- /usr/include/c++/11/bits/node_handle.h \
  /usr/include/c++/11/bits/unordered_map.h \
- /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/bits/stl_algo.h \
+ /usr/include/c++/11/bits/stl_algo.h \
  /usr/include/c++/11/bits/algorithmfwd.h \
  /usr/include/c++/11/bits/uniform_int_dist.h \
  /usr/include/boost/cerrno.hpp \
  /usr/include/boost/system/detail/generic_category.hpp \
  /usr/include/boost/system/detail/system_category_posix.hpp \
  /usr/include/boost/system/detail/std_interoperability.hpp \
- /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
- /usr/include/c++/11/bits/stl_map.h \
- /usr/include/c++/11/bits/stl_multimap.h /usr/include/c++/11/mutex \
- /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
- /usr/include/c++/11/limits /usr/include/c++/11/ctime \
- /usr/include/c++/11/bits/parse_numbers.h \
+ /usr/include/c++/11/mutex /usr/include/c++/11/chrono \
+ /usr/include/c++/11/ratio /usr/include/c++/11/limits \
+ /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
  /usr/include/c++/11/bits/std_mutex.h \
  /usr/include/c++/11/bits/unique_lock.h \
  /usr/include/boost/asio/detail/impl/throw_error.ipp \
@@ -522,6 +523,7 @@ CMakeFiles/game_server.dir/srcs/channel.cpp.o: \
  /usr/include/boost/date_time/c_time.hpp \
  /usr/include/boost/date_time/compiler_config.hpp \
  /usr/include/boost/date_time/locale_config.hpp \
+ /usr/include/boost/config/auto_link.hpp \
  /usr/include/x86_64-linux-gnu/sys/time.h \
  /usr/include/boost/shared_ptr.hpp \
  /usr/include/boost/smart_ptr/shared_ptr.hpp \
@@ -1111,65 +1113,222 @@ CMakeFiles/game_server.dir/srcs/channel.cpp.o: \
  /usr/include/boost/asio/windows/stream_handle.hpp \
  /usr/include/boost/asio/write_at.hpp \
  /usr/include/boost/asio/impl/write_at.hpp \
- /home/deulee/project_dp/proto_build/message.pb.h \
- /usr/include/google/protobuf/port_def.inc \
- /usr/include/google/protobuf/port_undef.inc \
- /usr/include/google/protobuf/io/coded_stream.h \
- /usr/include/x86_64-linux-gnu/sys/param.h \
- /usr/include/x86_64-linux-gnu/bits/param.h /usr/include/linux/param.h \
- /usr/include/x86_64-linux-gnu/asm/param.h \
- /usr/include/asm-generic/param.h \
- /usr/include/google/protobuf/stubs/common.h /usr/include/c++/11/set \
- /usr/include/c++/11/bits/stl_set.h \
- /usr/include/c++/11/bits/stl_multiset.h \
- /usr/include/google/protobuf/stubs/port.h /usr/include/c++/11/stdlib.h \
- /usr/include/google/protobuf/stubs/platform_macros.h \
- /usr/include/byteswap.h /usr/include/google/protobuf/stubs/macros.h \
- /usr/include/google/protobuf/stubs/logging.h \
- /usr/include/google/protobuf/stubs/strutil.h \
- /usr/include/google/protobuf/stubs/stringpiece.h \
- /usr/include/google/protobuf/stubs/hash.h \
+ /home/deulee/project_dp/generated/message.pb.h \
+ /usr/local/include/google/protobuf/port_def.inc \
+ /usr/local/include/absl/base/attributes.h \
+ /usr/local/include/absl/base/config.h \
+ /usr/local/include/absl/base/options.h \
+ /usr/local/include/absl/base/policy_checks.h \
+ /usr/local/include/google/protobuf/port_undef.inc \
+ /usr/local/include/google/protobuf/io/coded_stream.h \
+ /usr/local/include/google/protobuf/stubs/common.h \
+ /usr/local/include/absl/strings/string_view.h \
+ /usr/local/include/absl/base/nullability.h \
+ /usr/local/include/absl/base/internal/nullability_impl.h \
+ /usr/local/include/absl/meta/type_traits.h \
+ /usr/local/include/absl/base/internal/throw_delegate.h \
+ /usr/local/include/absl/base/macros.h \
+ /usr/local/include/absl/base/optimization.h \
+ /usr/local/include/absl/base/port.h \
+ /usr/local/include/google/protobuf/stubs/platform_macros.h \
+ /usr/local/include/google/protobuf/stubs/port.h \
+ /usr/include/c++/11/stdlib.h /usr/include/byteswap.h \
+ /usr/local/include/absl/log/absl_check.h \
+ /usr/local/include/absl/log/internal/check_impl.h \
+ /usr/local/include/absl/log/internal/check_op.h \
+ /usr/local/include/absl/log/internal/nullguard.h \
+ /usr/local/include/absl/log/internal/nullstream.h \
+ /usr/local/include/absl/base/log_severity.h \
+ /usr/local/include/absl/log/internal/strip.h \
+ /usr/local/include/absl/log/internal/log_message.h \
+ /usr/local/include/absl/base/internal/errno_saver.h \
+ /usr/local/include/absl/log/log_entry.h \
+ /usr/local/include/absl/log/internal/config.h \
+ /usr/local/include/absl/time/time.h \
+ /usr/local/include/absl/time/civil_time.h \
+ /usr/local/include/absl/time/internal/cctz/include/cctz/civil_time.h \
+ /usr/local/include/absl/time/internal/cctz/include/cctz/civil_time_detail.h \
+ /usr/local/include/absl/time/internal/cctz/include/cctz/time_zone.h \
+ /usr/local/include/absl/types/span.h \
+ /usr/local/include/absl/types/internal/span.h \
+ /usr/local/include/absl/algorithm/algorithm.h \
+ /usr/local/include/absl/log/log_sink.h \
+ /usr/local/include/absl/strings/has_absl_stringify.h \
+ /usr/local/include/absl/log/internal/conditions.h \
+ /usr/local/include/absl/log/internal/voidify.h \
+ /usr/local/include/absl/numeric/bits.h \
+ /usr/local/include/absl/numeric/internal/bits.h \
+ /usr/local/include/absl/strings/cord.h \
+ /usr/local/include/absl/base/internal/endian.h \
+ /usr/local/include/absl/base/casts.h \
+ /usr/local/include/absl/base/internal/identity.h \
+ /usr/local/include/absl/base/internal/unaligned_access.h \
+ /usr/local/include/absl/base/internal/per_thread_tls.h \
+ /usr/local/include/absl/container/inlined_vector.h \
+ /usr/local/include/absl/container/internal/inlined_vector.h \
+ /usr/local/include/absl/container/internal/compressed_tuple.h \
+ /usr/local/include/absl/utility/utility.h \
+ /usr/local/include/absl/base/internal/inline_variable.h \
+ /usr/local/include/absl/base/internal/invoke.h \
+ /usr/local/include/absl/memory/memory.h \
+ /usr/local/include/absl/crc/internal/crc_cord_state.h \
+ /usr/local/include/absl/crc/crc32c.h \
+ /usr/local/include/absl/crc/internal/crc32c_inline.h \
+ /usr/local/include/absl/crc/internal/crc32_x86_arm_combined_simd.h \
+ /usr/local/include/absl/strings/str_format.h \
+ /usr/local/include/absl/strings/internal/str_format/arg.h \
+ /usr/local/include/absl/numeric/int128.h \
+ /usr/local/include/absl/numeric/int128_have_intrinsic.inc \
+ /usr/local/include/absl/strings/internal/str_format/extension.h \
+ /usr/local/include/absl/strings/internal/str_format/output.h \
+ /usr/local/include/absl/strings/internal/str_format/bind.h \
+ /usr/local/include/absl/strings/internal/str_format/checker.h \
+ /usr/local/include/absl/strings/internal/str_format/constexpr_parser.h \
+ /usr/local/include/absl/base/const_init.h \
+ /usr/local/include/absl/strings/internal/str_format/parser.h \
+ /usr/local/include/absl/functional/function_ref.h \
+ /usr/local/include/absl/functional/internal/function_ref.h \
+ /usr/local/include/absl/functional/any_invocable.h \
+ /usr/local/include/absl/functional/internal/any_invocable.h \
+ /usr/local/include/absl/strings/cord_analysis.h \
+ /usr/local/include/absl/strings/internal/cord_internal.h \
+ /usr/local/include/absl/container/internal/container_memory.h \
+ /usr/local/include/absl/strings/cord_buffer.h \
+ /usr/local/include/absl/strings/internal/cord_rep_flat.h \
+ /usr/local/include/absl/strings/internal/cord_data_edge.h \
+ /usr/local/include/absl/strings/internal/cord_rep_btree.h \
+ /usr/local/include/absl/base/internal/raw_logging.h \
+ /usr/local/include/absl/base/internal/atomic_hook.h \
+ /usr/local/include/absl/strings/internal/cord_rep_btree_reader.h \
+ /usr/local/include/absl/strings/internal/cord_rep_btree_navigator.h \
+ /usr/local/include/absl/strings/internal/cord_rep_crc.h \
+ /usr/local/include/absl/strings/internal/cordz_functions.h \
+ /usr/local/include/absl/strings/internal/cordz_info.h \
+ /usr/local/include/absl/base/internal/spinlock.h \
+ /usr/local/include/absl/base/dynamic_annotations.h \
+ /usr/local/include/absl/base/internal/dynamic_annotations.h \
+ /usr/local/include/absl/base/internal/low_level_scheduling.h \
+ /usr/local/include/absl/base/internal/scheduling_mode.h \
+ /usr/local/include/absl/base/internal/tsan_mutex_interface.h \
+ /usr/local/include/absl/base/thread_annotations.h \
+ /usr/local/include/absl/strings/internal/cordz_handle.h \
+ /usr/local/include/absl/strings/internal/cordz_statistics.h \
+ /usr/local/include/absl/strings/internal/cordz_update_tracker.h \
+ /usr/local/include/absl/synchronization/mutex.h \
+ /usr/local/include/absl/base/internal/low_level_alloc.h \
+ /usr/local/include/absl/base/internal/thread_identity.h \
+ /usr/local/include/absl/synchronization/internal/kernel_timeout.h \
+ /usr/local/include/absl/time/clock.h \
+ /usr/local/include/absl/synchronization/internal/per_thread_sem.h \
+ /usr/local/include/absl/synchronization/internal/create_thread_identity.h \
+ /usr/local/include/absl/strings/internal/cordz_update_scope.h \
+ /usr/local/include/absl/strings/internal/resize_uninitialized.h \
+ /usr/local/include/absl/strings/internal/string_constant.h \
+ /usr/local/include/absl/types/optional.h \
+ /usr/local/include/absl/types/bad_optional_access.h \
+ /usr/local/include/absl/types/internal/optional.h \
+ /usr/local/include/google/protobuf/port.h \
+ /usr/local/include/google/protobuf/arena.h \
+ /usr/local/include/google/protobuf/arena_align.h \
+ /usr/local/include/google/protobuf/serial_arena.h \
+ /usr/local/include/absl/base/prefetch.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h \
+ /usr/local/include/google/protobuf/arena_cleanup.h \
+ /usr/local/include/absl/log/absl_log.h \
+ /usr/local/include/absl/log/internal/log_impl.h \
+ /usr/local/include/absl/log/absl_vlog_is_on.h \
+ /usr/local/include/absl/log/internal/vlog_config.h \
+ /usr/local/include/google/protobuf/arenaz_sampler.h \
+ /usr/local/include/google/protobuf/string_block.h \
+ /usr/local/include/google/protobuf/thread_safe_arena.h \
+ /usr/local/include/google/protobuf/arena_allocation_policy.h \
+ /usr/local/include/google/protobuf/arenastring.h \
+ /usr/local/include/google/protobuf/explicitly_constructed.h \
+ /usr/local/include/google/protobuf/generated_message_tctable_decl.h \
+ /usr/local/include/google/protobuf/message_lite.h \
+ /usr/local/include/absl/base/call_once.h \
+ /usr/local/include/absl/base/internal/spinlock_wait.h \
+ /usr/local/include/google/protobuf/internal_visibility.h \
+ /usr/local/include/google/protobuf/metadata_lite.h \
+ /usr/local/include/google/protobuf/parse_context.h \
+ /usr/local/include/google/protobuf/endian.h \
+ /usr/local/include/google/protobuf/implicit_weak_message.h \
+ /usr/local/include/google/protobuf/repeated_field.h \
+ /usr/local/include/google/protobuf/generated_enum_util.h \
+ /usr/local/include/google/protobuf/repeated_ptr_field.h \
+ /usr/local/include/google/protobuf/inlined_string_field.h \
+ /usr/local/include/google/protobuf/io/zero_copy_stream.h \
+ /usr/local/include/google/protobuf/wire_format_lite.h \
+ /usr/local/include/google/protobuf/generated_message_util.h \
+ /usr/local/include/google/protobuf/any.h \
+ /usr/local/include/google/protobuf/has_bits.h \
+ /usr/local/include/google/protobuf/generated_message_reflection.h \
+ /usr/local/include/google/protobuf/descriptor.h \
+ /usr/local/include/absl/container/btree_map.h \
+ /usr/local/include/absl/container/internal/btree.h \
+ /usr/local/include/absl/container/internal/common.h \
+ /usr/local/include/absl/container/internal/common_policy_traits.h \
+ /usr/local/include/absl/container/internal/layout.h \
+ /usr/local/include/absl/debugging/internal/demangle.h \
+ /usr/local/include/absl/strings/str_cat.h \
+ /usr/local/include/absl/strings/internal/stringify_sink.h \
+ /usr/local/include/absl/strings/numbers.h \
+ /usr/local/include/absl/types/compare.h \
+ /usr/local/include/absl/container/internal/btree_container.h \
+ /usr/local/include/absl/container/flat_hash_map.h \
+ /usr/local/include/absl/algorithm/container.h \
+ /usr/include/c++/11/numeric /usr/include/c++/11/bits/stl_numeric.h \
+ /usr/include/c++/11/pstl/glue_numeric_defs.h \
  /usr/include/c++/11/unordered_set \
  /usr/include/c++/11/bits/unordered_set.h \
- /usr/include/google/protobuf/port.h /usr/include/google/protobuf/arena.h \
- /usr/include/google/protobuf/arena_impl.h \
- /usr/include/google/protobuf/arenastring.h \
- /usr/include/google/protobuf/stubs/fastmem.h \
- /usr/include/google/protobuf/generated_message_table_driven.h \
- /usr/include/google/protobuf/map.h \
- /usr/include/google/protobuf/generated_enum_util.h \
- /usr/include/google/protobuf/message_lite.h \
- /usr/include/google/protobuf/metadata_lite.h \
- /usr/include/google/protobuf/stubs/once.h \
- /usr/include/google/protobuf/map_type_handler.h \
- /usr/include/google/protobuf/parse_context.h \
- /usr/include/google/protobuf/io/zero_copy_stream.h \
- /usr/include/google/protobuf/implicit_weak_message.h \
- /usr/include/google/protobuf/repeated_field.h \
- /usr/include/google/protobuf/stubs/casts.h \
- /usr/include/google/protobuf/wire_format_lite.h \
- /usr/include/google/protobuf/map_entry_lite.h \
- /usr/include/google/protobuf/generated_message_util.h \
- /usr/include/google/protobuf/any.h \
- /usr/include/google/protobuf/has_bits.h \
- /usr/include/google/protobuf/map_field_lite.h \
- /usr/include/google/protobuf/inlined_string_field.h \
- /usr/include/google/protobuf/generated_message_reflection.h \
- /usr/include/google/protobuf/descriptor.h \
- /usr/include/google/protobuf/stubs/mutex.h \
- /usr/include/google/protobuf/generated_enum_reflection.h \
- /usr/include/google/protobuf/unknown_field_set.h \
- /usr/include/google/protobuf/io/zero_copy_stream_impl_lite.h \
- /usr/include/google/protobuf/stubs/callback.h \
- /usr/include/google/protobuf/stubs/stl_util.h \
- /usr/include/google/protobuf/message.h \
- /usr/include/google/protobuf/extension_set.h \
- /home/deulee/project_dp/proto_build/movement.pb.h \
- /home/deulee/project_dp/proto_build/state.pb.h \
- /home/deulee/project_dp/proto_build/vector.pb.h \
- /home/deulee/project_dp/proto_build/player_position.pb.h \
+ /usr/local/include/absl/container/internal/hash_function_defaults.h \
+ /usr/local/include/absl/hash/hash.h \
+ /usr/local/include/absl/hash/internal/hash.h /usr/include/c++/11/bitset \
+ /usr/include/c++/11/forward_list /usr/include/c++/11/bits/forward_list.h \
+ /usr/include/c++/11/bits/forward_list.tcc /usr/include/c++/11/list \
+ /usr/include/c++/11/bits/stl_list.h /usr/include/c++/11/bits/list.tcc \
+ /usr/include/c++/11/set /usr/include/c++/11/bits/stl_set.h \
+ /usr/include/c++/11/bits/stl_multiset.h \
+ /usr/local/include/absl/container/fixed_array.h \
+ /usr/local/include/absl/hash/internal/city.h \
+ /usr/local/include/absl/hash/internal/low_level_hash.h \
+ /usr/local/include/absl/types/variant.h \
+ /usr/local/include/absl/types/internal/variant.h \
+ /usr/local/include/absl/types/bad_variant_access.h \
+ /usr/include/c++/11/filesystem /usr/include/c++/11/bits/fs_fwd.h \
+ /usr/include/c++/11/bits/fs_path.h /usr/include/c++/11/locale \
+ /usr/include/c++/11/bits/locale_facets_nonio.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/11/bits/locale_conv.h /usr/include/c++/11/iomanip \
+ /usr/include/c++/11/bits/quoted_string.h /usr/include/c++/11/codecvt \
+ /usr/include/c++/11/bits/fs_dir.h /usr/include/c++/11/bits/fs_ops.h \
+ /usr/local/include/absl/container/internal/raw_hash_map.h \
+ /usr/local/include/absl/container/internal/raw_hash_set.h \
+ /usr/local/include/absl/container/internal/hash_policy_traits.h \
+ /usr/local/include/absl/container/internal/hashtable_debug_hooks.h \
+ /usr/local/include/absl/container/internal/hashtablez_sampler.h \
+ /usr/local/include/absl/profiling/internal/sample_recorder.h \
+ /usr/local/include/google/protobuf/extension_set.h \
+ /usr/local/include/google/protobuf/generated_enum_reflection.h \
+ /usr/local/include/google/protobuf/unknown_field_set.h \
+ /usr/local/include/google/protobuf/io/zero_copy_stream_impl_lite.h \
+ /usr/local/include/google/protobuf/stubs/callback.h \
+ /usr/local/include/google/protobuf/message.h \
+ /usr/local/include/google/protobuf/map.h \
+ /usr/local/include/google/protobuf/map_type_handler.h \
+ /usr/local/include/google/protobuf/reflection.h \
+ /home/deulee/project_dp/generated/movement.pb.h \
+ /home/deulee/project_dp/generated/state.pb.h \
+ /home/deulee/project_dp/generated/vector.pb.h \
+ /home/deulee/project_dp/generated/player_position.pb.h \
+ /home/deulee/project_dp/generated/attach.pb.h \
  /home/deulee/project_dp/srcs/session.hpp \
  /home/deulee/project_dp/srcs/protobuf_mannager.hpp \
- /home/deulee/project_dp/srcs/../proto_build/message.pb.h \
  /home/deulee/project_dp/srcs/prototype_factory.hpp \
  /home/deulee/project_dp/srcs/prototype.hpp
