@@ -1,4 +1,0 @@
-/home/deulee/project_dp/dummy_test/socket_test/build/CMakeFiles/hw_grpc_proto.dir
-/home/deulee/project_dp/dummy_test/socket_test/build/CMakeFiles/dummy_client.dir
-/home/deulee/project_dp/dummy_test/socket_test/build/CMakeFiles/edit_cache.dir
-/home/deulee/project_dp/dummy_test/socket_test/build/CMakeFiles/rebuild_cache.dir

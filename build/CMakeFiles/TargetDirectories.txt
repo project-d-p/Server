@@ -1,4 +1,0 @@
-/home/deulee/project_dp/build/CMakeFiles/hw_grpc_proto.dir
-/home/deulee/project_dp/build/CMakeFiles/game_server.dir
-/home/deulee/project_dp/build/CMakeFiles/edit_cache.dir
-/home/deulee/project_dp/build/CMakeFiles/rebuild_cache.dir
