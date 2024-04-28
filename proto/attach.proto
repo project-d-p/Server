@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message Attachment {
+	string channel_id = 1;
+	string player_id = 2;
+}
