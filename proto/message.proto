@@ -2,10 +2,12 @@ syntax = "proto3";
 
 import "movement.proto";
 import "player_position.proto";
+import "attach.proto";
 
 message Message {
 	oneof message_type {
 		Movement movement = 1;
 		PlayerPosition player_position = 2;
+		Attachment attach = 3;
 	}
 }

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../proto_build/message.pb.h"
+#include "message.pb.h"
 
 namespace deulee {
 
