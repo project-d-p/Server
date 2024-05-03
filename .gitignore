@@ -1,2 +1,5 @@
 build/
-dummy_test/
+dummy_test/socket_test/
+dummy_test/grpc_test/build/
+dummy_test/grpc_test/generated/
+generated/
