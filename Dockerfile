@@ -17,8 +17,8 @@ RUN apt-get update && apt-get install -y \
 RUN chmod +x /app/Server/install_dependency.sh
 RUN chmod +x /app/Server/generate_code.sh
 
-CMD ["/app/Server/install_dependency.sh"]
-CMD ["/app/Server/generate_code.sh"]
+RUN /app/Server/install_dependency.sh
+# CMD /app/Server/generate_code.sh
 
 EXPOSE 50051
 EXPOSE 4242

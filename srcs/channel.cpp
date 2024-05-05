@@ -13,10 +13,10 @@ Channel::Channel(unsigned int channel_id, boost::asio::io_context& io_context, c
 
 void Channel::AttachSession(std::shared_ptr<Session> session, std::string player_id)
 {
-	udp_sessions_[player_id] = session->GetUdpEndPoint();
-	std::cout << "Udp endpoint attached" << std::endl;
-	std::cout << udp_sessions_[player_id].address().to_string() << std::endl;
-	std::cout << udp_sessions_[player_id].port() << std::endl;
+	// udp_sessions_[player_id] = session->GetUdpEndPoint();
+	// std::cout << "Udp endpoint attached" << std::endl;
+	// std::cout << udp_sessions_[player_id].address().to_string() << std::endl;
+	// std::cout << udp_sessions_[player_id].port() << std::endl;
 	tcp_sessions_[player_id] = session;
 	SessionRead(player_id);
 	std::cout << "Session attached" << std::endl;
@@ -68,6 +68,7 @@ void Channel::ChannelRead()
 		instance_endpoint_, 
 		[this](boost::system::error_code ec, std::size_t length) {
 			if (!ec) {
+				this->udp_sessions_[instance_endpoint_.address().to_string()] = instance_endpoint_;
 				Message message(ProtobufMannager::Deserialize(read_data_));
 				memset(read_data_, 0, MAX_LENGTH);
 				this->udp_message_queue_.push(message);
