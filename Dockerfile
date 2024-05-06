@@ -14,7 +14,6 @@ RUN apt-get update && apt-get install -y \
 	openssl \
 	libssl-dev
 
-
 RUN chmod +x /app/Server/install_dependency.sh
 RUN chmod +x /app/Server/generate_code.sh
 
