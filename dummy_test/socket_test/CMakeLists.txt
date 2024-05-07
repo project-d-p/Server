@@ -3,7 +3,7 @@ project(game_server)
 
 find_package(Threads REQUIRED)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 add_compile_options(-g)
@@ -37,14 +37,16 @@ MESSAGE(STATUS "_GRPC: ${_GRPC_GRPCPP}")
 MESSAGE(STATUS "_PROTO: ${_PROTOBUF_LIBPROTOBUF}")
 
 set(PROTO_FILES
-    "${CMAKE_CURRENT_SOURCE_DIR}/proto/message.proto"
-    "${CMAKE_CURRENT_SOURCE_DIR}/proto/movement.proto"
-    "${CMAKE_CURRENT_SOURCE_DIR}/proto/player_position.proto"
-    "${CMAKE_CURRENT_SOURCE_DIR}/proto/attach.proto"
-    "${CMAKE_CURRENT_SOURCE_DIR}/proto/state.proto"
-    "${CMAKE_CURRENT_SOURCE_DIR}/proto/vector.proto"
-    "${CMAKE_CURRENT_SOURCE_DIR}/proto/grpc_match.proto"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../proto/message.proto"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../proto/movement.proto"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../proto/player_position.proto"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../proto/attach.proto"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../proto/state.proto"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../proto/vector.proto"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../proto/grpc_match.proto"
 )
+
+# message(STATUS "DIR: ${CMAKE_CURRENT_SOURCE_DIR}")
 
 set(GENERATED_DIR "${CMAKE_CURRENT_SOURCE_DIR}/generated")
 file(MAKE_DIRECTORY ${GENERATED_DIR})
@@ -64,7 +66,7 @@ foreach(PROTO_FILE IN LISTS PROTO_FILES)
         COMMAND ${_PROTOBUF_PROTOC}
             ARGS --grpc_out "${GENERATED_DIR}"
             --cpp_out "${GENERATED_DIR}"
-            -I "${CMAKE_CURRENT_SOURCE_DIR}/proto"
+            -I "${CMAKE_CURRENT_SOURCE_DIR}/../../proto"
             --plugin=protoc-gen-grpc="${_GRPC_CPP_PLUGIN_EXECUTABLE}"
             "${PROTO_FILE}"
         DEPENDS "${PROTO_FILE}"
@@ -90,14 +92,11 @@ target_link_libraries(hw_grpc_proto
     ${_PROTOBUF_LIBPROTOBUF}
 )
 
-add_executable(game_server
-main.cpp srcs/server.cpp srcs/session.cpp srcs/protobuf_mannager.cpp
-srcs/prototype.cpp srcs/prototype_factory.cpp srcs/movement_prototype.cpp
-srcs/channel.cpp srcs/call_data.cpp srcs/call_data_create_channel.cpp
-srcs/call_data_attach_player.cpp srcs/double_buffer.cpp
+add_executable(dummy_client
+dummy_client.cpp
 )
 
-target_link_libraries(game_server
+target_link_libraries(dummy_client
     hw_grpc_proto
     absl::flags
     absl::flags_parse

@@ -26,13 +26,13 @@ void Session::Start()
 	});
 }
 
-void Session::read(std::queue<Message>& tcp_message_queue)
+void Session::read(DoubleBuffer& tcp_message_queue)
 {
 	socket_.async_read_some(boost::asio::buffer(data_, max_length),
 		[this, &tcp_message_queue](boost::system::error_code ec, std::size_t length) {
 			if (!ec) {
 				Message message(ProtobufMannager::Deserialize(data_));
-				tcp_message_queue.push(message);
+				tcp_message_queue.FillBuffer(message);
 				memset(data_, 0, max_length);
 				this->read(tcp_message_queue);
 			}

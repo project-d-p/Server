@@ -1,5 +1,12 @@
 #pragma once
 
+#include "double_buffer.hpp"
+#include "session.hpp"
+#include "protobuf_mannager.hpp"
+#include "prototype_factory.hpp"
+#include "prototype.hpp"
+#include "message.pb.h"
+#include "boost/asio.hpp"
 #include <vector>
 #include <queue>
 #include <utility>
@@ -9,12 +16,6 @@
 #include <unistd.h>
 #include <cstring>
 #include <map>
-#include "boost/asio.hpp"
-#include "message.pb.h"
-#include "session.hpp"
-#include "protobuf_mannager.hpp"
-#include "prototype_factory.hpp"
-#include "prototype.hpp"
 
 namespace deulee {
 
@@ -27,8 +28,10 @@ private:
 	std::vector<std::string> players_;
 	std::map<std::string, std::shared_ptr<Session>> tcp_sessions_;
 	std::map<std::string, boost::asio::ip::udp::endpoint> udp_sessions_;
-	std::queue<Message> tcp_message_queue_;
-	std::queue<Message> udp_message_queue_;
+	std::map<std::string, DoubleBuffer> tcp_message_queue_;
+	DoubleBuffer udp_message_queue_;
+	// 여기서 아마 queue에서 data race가 발생할 것.
+	// 각각의 스레드가 독립적인 메모리에 접근하게 하고 싶음.
 	
 	enum { MAX_LENGTH = 1024 };
 	char read_data_[MAX_LENGTH];
@@ -42,7 +45,9 @@ private:
 	void ChannelWrite(const Message& message);
 
 public:
-	Channel(unsigned int channel_id, boost::asio::io_context& io_context, const unsigned int port, int timerfd);
+	Channel(unsigned int channel_id, boost::asio::io_context& network_context,
+			boost::asio::io_context& logic_context, const unsigned int port, int timerfd);
+
 	void AttachSession(std::shared_ptr<Session> session, std::string player_id);
 	void AttachPlayer(std::string player_id);
 	std::string GetChannelId() const;

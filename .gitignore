@@ -1,5 +1,9 @@
 build/
-dummy_test/socket_test/
+cmake-out/
+dummy_test/socket_test/build/
+dummy_test/socket_test/cmake-out/
+dummy_test/socket_test/generated/
 dummy_test/grpc_test/build/
+dummy_test/grpc_test/cmake-out/
 dummy_test/grpc_test/generated/
 generated/
