@@ -10,17 +10,9 @@
 
 int main() {
 	deulee::PrototypeFactory prototype_factory;
-	// boost::asio::io_context io_context;
-	deulee::Server server(io_context, PORT);
-	std::vector<std::thread> threads;
-	// for (int i = 0; i < 3; i++) {
-	// 	threads.push_back(std::thread([](){
-	// 		io_context.run();
-	// 	}));
-	// }
-	// for (auto& thread : threads) {
-	// 	thread.detach();
-	// }
-	io_context.run();
+	boost::asio::io_context io_context;
+	// boost::asio::io_context logic_context;
+	deulee::Server server;
+	while (1);
 	return 0;
 }

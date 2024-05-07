@@ -94,7 +94,7 @@ add_executable(game_server
 main.cpp srcs/server.cpp srcs/session.cpp srcs/protobuf_mannager.cpp
 srcs/prototype.cpp srcs/prototype_factory.cpp srcs/movement_prototype.cpp
 srcs/channel.cpp srcs/call_data.cpp srcs/call_data_create_channel.cpp
-srcs/call_data_attach_player.cpp
+srcs/call_data_attach_player.cpp srcs/double_buffer.cpp
 )
 
 target_link_libraries(game_server
