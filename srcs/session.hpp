@@ -1,10 +1,11 @@
 #pragma once
 
+#include "double_buffer.hpp"
+#include "message.pb.h"
+#include "protobuf_mannager.hpp"
 #include <boost/asio.hpp>
 #include <memory>
 #include <queue>
-#include "message.pb.h"
-#include "protobuf_mannager.hpp"
 
 namespace deulee {
 
@@ -21,7 +22,7 @@ public:
 	Session& operator=(const Session&) = delete;
 	Session(boost::asio::ip::tcp::socket socket);
 	void Start();
-	void read(std::queue<Message>& tcp_message_queue);
+	void read(DoubleBuffer& tcp_message_queue);
 	void write(const Message& message);
 	boost::asio::ip::udp::endpoint GetUdpEndPoint();
 	~Session();

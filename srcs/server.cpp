@@ -7,7 +7,9 @@
 namespace deulee {
 
 std::map<unsigned int, std::shared_ptr<Channel>> Server::channel_;
-boost::asio::ip::tcp::acceptor Server::acceptor_(io_context, boost::asio::ip::tcp::endpoint(boost::asio::ip::tcp::v4(), 4242));
+boost::asio::io_context Server::logic_context_;
+boost::asio::io_context Server::network_context_;
+boost::asio::ip::tcp::acceptor Server::acceptor_ = boost::asio::ip::tcp::acceptor(network_context_, boost::asio::ip::tcp::endpoint(boost::asio::ip::tcp::v4(), 4242));
 
 void Server::GrpcRun(unsigned short port) {
 	std::string server_address = absl::StrFormat("0.0.0.0:%d", port);
@@ -35,11 +37,36 @@ void Server::HandleGrpcRequest() {
 	}
 }
 
-Server::Server(boost::asio::io_context& io_context, unsigned short port)
-{
-	this->GrpcRun(50051);
-	Accept();
+void Server::NetworkRun() {
+	for (int i = 0; i < NETWORK_THREADS; i++) {
+		network_threads_.push_back(std::thread([&network_context = network_context_](){
+			network_context.run();
+		}));
+	}
+	for (int i = 0; i < NETWORK_THREADS; i++) {
+		network_threads_[i].detach();
+	}
+}
 
+void Server::GameRun() {
+	for (int i = 0; i < GAME_THREADS; i++) {
+		game_threads_.push_back(std::thread([&logic_context = logic_context_](){
+			logic_context.run();
+		}));
+	}
+	for (int i = 0; i < GAME_THREADS; i++) {
+		game_threads_[i].detach();
+	}
+}
+
+Server::Server()
+	: logic_work_(logic_context_), network_work_(network_context_)
+{
+	std::cout << "Server is running" << std::endl;
+	this->GrpcRun(50051);
+	this->GameRun();
+	this->NetworkRun();
+	Accept();
 }
 
 void Server::Accept() {
@@ -77,7 +104,7 @@ std::shared_ptr<Channel> Server::CreateChannel() {
 		exit(1);
 	}
 
-	std::shared_ptr<Channel> channel = std::make_shared<Channel>(channel_id, io_context, port++, timerfd);
+	std::shared_ptr<Channel> channel = std::make_shared<Channel>(channel_id, network_context_, logic_context_, port++, timerfd);
 	channel_[channel_id] = channel;
 	return channel;
 }

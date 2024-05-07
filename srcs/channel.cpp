@@ -1,11 +1,14 @@
 #include "channel.hpp"
 
+#include <thread>
+
 namespace deulee {
 
-Channel::Channel(unsigned int channel_id, boost::asio::io_context& io_context, const unsigned int port, int timerfd)
+Channel::Channel(unsigned int channel_id, boost::asio::io_context& network_context,
+	boost::asio::io_context& logic_context, const unsigned int port, int timerfd)
 	: channel_id_(channel_id),
-	  instance_socket_(io_context, boost::asio::ip::udp::endpoint(boost::asio::ip::udp::v4(), port)),
-	  timer_fd_(io_context, timerfd)
+	  instance_socket_(network_context, boost::asio::ip::udp::endpoint(boost::asio::ip::udp::v4(), port)),
+	  timer_fd_(logic_context, timerfd)
 {
 	this->ChannelRead();
 	this->ProcessMessage();
@@ -24,7 +27,7 @@ void Channel::AttachSession(std::shared_ptr<Session> session, std::string player
 
 void Channel::SessionRead(std::string player_id)
 {
-	tcp_sessions_[player_id]->read(tcp_message_queue_);
+	tcp_sessions_[player_id]->read(this->tcp_message_queue_[player_id]);
 }
 
 void Channel::SessionWrite(const Message& message)
@@ -40,21 +43,23 @@ void Channel::ProcessMessage()
 		if (ec) {
 			return ;
 		}
-		while (!tcp_message_queue_.empty() || !udp_message_queue_.empty()) {
-			if (!tcp_message_queue_.empty()) {
-				Message message = tcp_message_queue_.front();
-				tcp_message_queue_.pop();
+		this->udp_message_queue_.SwapBuffer();
+		for (auto& it : this->tcp_message_queue_) {
+			it.second.SwapBuffer();
+		}
+		for (int i = 0; i < this->udp_message_queue_.GetSize(); i++) {
+			Message message = this->udp_message_queue_.ReadBuffer();
+			Prototype* prototype = PrototypeFactory::GetPrototype(message);
+			prototype->MessageHandler(message);
+			this->ChannelWrite(message);
+			delete prototype;
+		}
+		for (auto& it : this->tcp_message_queue_) {
+			for (int i = 0; i < it.second.GetSize(); i++) {
+				Message message = it.second.ReadBuffer();
 				Prototype* prototype = PrototypeFactory::GetPrototype(message);
 				Message return_message = prototype->MessageHandler(message);
 				this->SessionWrite(return_message);
-				delete prototype;
-			}
-			if (!udp_message_queue_.empty()) {
-				Message message = udp_message_queue_.front();
-				udp_message_queue_.pop();
-				Prototype* prototype = PrototypeFactory::GetPrototype(message);
-				prototype->MessageHandler(message);
-				this->ChannelWrite(message);
 				delete prototype;
 			}
 		}
@@ -67,13 +72,14 @@ void Channel::ChannelRead()
 	instance_socket_.async_receive_from(boost::asio::buffer(read_data_, MAX_LENGTH),
 		instance_endpoint_, 
 		[this](boost::system::error_code ec, std::size_t length) {
-			if (!ec) {
-				this->udp_sessions_[instance_endpoint_.address().to_string()] = instance_endpoint_;
-				Message message(ProtobufMannager::Deserialize(read_data_));
-				memset(read_data_, 0, MAX_LENGTH);
-				this->udp_message_queue_.push(message);
-				this->ChannelRead();
+			if (ec) {
+				return ;
 			}
+			this->udp_sessions_[instance_endpoint_.address().to_string()] = instance_endpoint_;
+			Message message(ProtobufMannager::Deserialize(read_data_));
+			memset(read_data_, 0, MAX_LENGTH);
+			this->udp_message_queue_.FillBuffer(message);
+			this->ChannelRead();
 	});
 }
 
